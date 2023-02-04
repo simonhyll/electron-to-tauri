@@ -5,6 +5,7 @@
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
+    "build": "",
     "tauri": "tauri"
   },
   "devDependencies": {
