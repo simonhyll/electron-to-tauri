@@ -87,3 +87,7 @@ If you can't use GitHub, you can use other providers:
 9. Do steps 5 and 6 again.
 
 10. Open the installed version of the app and see that it updates itself.
+
+## Simons notes
+
+1. Make sure you set a newer version in tauri.conf.json
