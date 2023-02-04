@@ -90,4 +90,4 @@ If you can't use GitHub, you can use other providers:
 
 ## Simons notes
 
-1. Make sure you set a newer version in tauri.conf.json
+1. Make sure you set a newer version in both package.json and tauri.conf.json
