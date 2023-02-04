@@ -1,19 +1,21 @@
 {
   "name": "electron-updater-example",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
+    "build": "electron-builder",
     "dev": "electron .",
-    "publish": "electron-builder -p always"
+    "pub": "electron-builder -p always"
   },
   "devDependencies": {
-    "electron": "^14.0.1",
-    "electron-builder": "^22.11.7",
+    "electron": "^22.2.0",
+    "electron-builder": "^23.6.0",
     "electron-notarize": "^1.1.1"
   },
   "dependencies": {
+    "builder-util-runtime": "^9.2.0-alpha.3",
     "electron-log": "^4.4.1",
     "electron-updater": "^4.3.9"
   },
