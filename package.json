@@ -1,27 +1,35 @@
 {
   "name": "electron-updater-example",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "main": "main.js",
   "description": "electron-updater example project",
-  "author": "Matt Haggard",
+  "author": "Simon Hyll <hyllsimon@gmail.com>",
   "scripts": {
+    "ele-build": "electron-builder",
+    "pub": "electron-builder -p always",
+    "dev": "electron .",
     "build": "tauri build",
     "tauri": "tauri"
   },
   "devDependencies": {
     "electron": "^22.2.0",
     "electron-builder": "^23.6.0",
-    "electron-notarize": "^1.1.1"
+    "@tauri-apps/cli": "^1.2.3",
+    "builder-util-runtime": "^9.2.0-alpha.3"
   },
   "dependencies": {
-    "@tauri-apps/cli": "^1.2.3",
-    "builder-util-runtime": "^9.2.0-alpha.3",
-    "electron-log": "^4.4.1",
+    "electron-log": "5.0.0-beta.21",
     "electron-updater": "^4.3.9"
   },
   "build": {
+    "files": [
+      "!src-tauri",
+      "!dist",
+      "!.devcontainer",
+      "!.vscode",
+      "!.pnpm-store"
+    ],
     "appId": "com.github.iffy.electronupdaterexample",
-    "afterSign": "./build/notarize.js",
     "mac": {
       "category": "your.app.category.type"
     },

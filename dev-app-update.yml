@@ -1,0 +1,7 @@
+provider: generic
+url: http://localhost:8000
+channel: latest
+files:
+  - './dist/**/*.{exe,dmg,pkg,deb,rpm}'
+  - latest.yml
+publish: false

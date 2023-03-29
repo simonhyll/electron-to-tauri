@@ -4,7 +4,8 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const log = require('electron-log');
 const { autoUpdater } = require("electron-updater");
-
+autoUpdater.logger = require("electron-log")
+autoUpdater.logger.transports.file.level = "info"
 //-------------------------------------------------------------------
 // Logging
 //
@@ -99,6 +100,7 @@ app.on('ready', function () {
   Menu.setApplicationMenu(menu);
 
   createDefaultWindow();
+  autoUpdater.checkForUpdates();
 });
 app.on('window-all-closed', () => {
   app.quit();
@@ -114,9 +116,9 @@ app.on('window-all-closed', () => {
 // This will immediately download an update, then install when the
 // app quits.
 //-------------------------------------------------------------------
-app.on('ready', function () {
-  autoUpdater.checkForUpdatesAndNotify();
-});
+// app.on('ready', function () {
+//   autoUpdater.checkForUpdatesAndNotify();
+// });
 
 //-------------------------------------------------------------------
 // Auto updates - Option 2 - More control
@@ -132,16 +134,16 @@ app.on('ready', function () {
 // app.on('ready', function()  {
 //   autoUpdater.checkForUpdates();
 // });
-// autoUpdater.on('checking-for-update', () => {
-// })
-// autoUpdater.on('update-available', (info) => {
-// })
-// autoUpdater.on('update-not-available', (info) => {
-// })
-// autoUpdater.on('error', (err) => {
-// })
-// autoUpdater.on('download-progress', (progressObj) => {
-// })
+autoUpdater.on('checking-for-update', () => {
+})
+autoUpdater.on('update-available', (info) => {
+})
+autoUpdater.on('update-not-available', (info) => {
+})
+autoUpdater.on('error', (err) => {
+})
+autoUpdater.on('download-progress', (progressObj) => {
+})
 autoUpdater.on('update-downloaded', (info) => {
   autoUpdater.quitAndInstall();
 })

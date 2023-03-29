@@ -5,20 +5,18 @@ specifiers:
   builder-util-runtime: ^9.2.0-alpha.3
   electron: ^22.2.0
   electron-builder: ^23.6.0
-  electron-log: ^4.4.1
-  electron-notarize: ^1.1.1
+  electron-log: 5.0.0-beta.21
   electron-updater: ^4.3.9
 
 dependencies:
-  '@tauri-apps/cli': 1.2.3
-  builder-util-runtime: 9.2.0-alpha.3
-  electron-log: 4.4.8
+  electron-log: 5.0.0-beta.21
   electron-updater: 4.6.5
 
 devDependencies:
+  '@tauri-apps/cli': 1.2.3
+  builder-util-runtime: 9.2.0-alpha.3
   electron: 22.2.0
   electron-builder: 23.6.0
-  electron-notarize: 1.2.2
 
 packages:
 
@@ -103,7 +101,7 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-darwin-x64/1.2.3:
@@ -112,7 +110,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-linux-arm-gnueabihf/1.2.3:
@@ -121,7 +119,7 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-linux-arm64-gnu/1.2.3:
@@ -130,7 +128,7 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-linux-arm64-musl/1.2.3:
@@ -139,7 +137,7 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-linux-x64-gnu/1.2.3:
@@ -148,7 +146,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-linux-x64-musl/1.2.3:
@@ -157,7 +155,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-win32-ia32-msvc/1.2.3:
@@ -166,7 +164,7 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli-win32-x64-msvc/1.2.3:
@@ -175,7 +173,7 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /@tauri-apps/cli/1.2.3:
@@ -192,7 +190,7 @@ packages:
       '@tauri-apps/cli-linux-x64-musl': 1.2.3
       '@tauri-apps/cli-win32-ia32-msvc': 1.2.3
       '@tauri-apps/cli-win32-x64-msvc': 1.2.3
-    dev: false
+    dev: true
 
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -526,7 +524,7 @@ packages:
       sax: 1.2.4
     transitivePeerDependencies:
       - supports-color
-    dev: false
+    dev: true
 
   /builder-util/23.6.0:
     resolution: {integrity: sha512-QiQHweYsh8o+U/KNCZFSvISRnvRctb8m/2rB2I1JdByzvNKxPeFLlHFRPQRXab6aYeXc18j9LpsDLJ3sGQmWTQ==}
@@ -818,20 +816,10 @@ packages:
       - supports-color
     dev: true
 
-  /electron-log/4.4.8:
-    resolution: {integrity: sha512-QQ4GvrXO+HkgqqEOYbi+DHL7hj5JM+nHi/j+qrN9zeeXVKy8ZABgbu4CnG+BBqDZ2+tbeq9tUC4DZfIWFU5AZA==}
+  /electron-log/5.0.0-beta.21:
+    resolution: {integrity: sha512-ljN850n6syNz+eNPj83QuGKmgG/HKHAMVfvB/46D9GBPa1REwN7ALbqvaQsy094wP8xH17ga5k7PSYWi/eE+uQ==}
+    engines: {electron: '>= 13', node: '>= 14'}
     dev: false
-
-  /electron-notarize/1.2.2:
-    resolution: {integrity: sha512-ZStVWYcWI7g87/PgjPJSIIhwQXOaw4/XeXU+pWqMMktSLHaGMLHdyPPN7Cmao7+Cr7fYufA16npdtMndYciHNw==}
-    engines: {node: '>= 10.0.0'}
-    deprecated: Please use @electron/notarize moving forward.  There is no API change, just a package name change
-    dependencies:
-      debug: 4.3.4
-      fs-extra: 9.1.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
 
   /electron-osx-sign/0.6.0:
     resolution: {integrity: sha512-+hiIEb2Xxk6eDKJ2FFlpofCnemCbjbT5jz+BKGpVBrRNT3kWTGs4DfNX6IzGwgi33hUcXF+kFs9JW+r6Wc1LRg==}
